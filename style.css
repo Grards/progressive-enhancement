@@ -1,0 +1,226 @@
+/* --- GENEREALITIES --- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(./img/footer.png), -webkit-linear-gradient(180deg, rgb(255, 252, 242), rgb(207, 252, 248));
+    background: url(./img/footer.png), linear-gradient(180deg, rgb(255, 252, 242), rgb(207, 252, 248));  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    position: relative;
+    font-family: font-family: 'Open Sans', sans-serif;;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{ 
+    color:darkcyan;
+    font-weight: 700;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color:rgb(175, 105, 207);
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    height: 150px;
+    line-height: 150px;
+    font-size: max(3vw, 20px);
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 2px solid rgba(19, 6, 6, 0.904);
+}
+h2{
+    margin-top: 50px;
+    text-transform: uppercase;
+    color: rgb(71, 92, 36);
+    font-size: 1.8em;
+}
+figure{
+    padding: 0;
+    margin: 0;
+}
+.good{
+    color: rgb(1, 180, 10);
+}
+.bad{
+    color:rgb(199, 37, 37);
+}
+.good, .bad{
+    text-transform: capitalize;
+}
+
+
+/* ---HEADER --- */
+header{
+    text-align: center;
+}
+header > h1{
+    background-color: rgba(248, 248, 161, 0.664);
+    color: rgb(34, 34, 34);
+}
+header figure{
+    margin: 80px 0;
+    text-align: right;
+}
+header blockquote, header figure > figcaption, header q{
+    max-width: 50%;
+    margin: auto;
+    font-style: italic;
+}
+header blockquote{
+    font-size: 160%;
+    background-color: rgba(194, 192, 192, 0.459);
+    border-left: 3px solid firebrick;
+    padding: 10px 30px;
+    margin: auto;
+}
+header hr{
+    margin-top: 20px;
+}
+
+/* --- MAIN --- */
+main{
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;  
+}
+
+/* First article : 4 types of people */
+article:first-of-type{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+article:first-of-type > *{
+    flex: 1;
+}
+article:first-of-type h2{
+    flex-basis: 100%;
+}
+article:first-of-type ul{
+    min-width: 400px;
+    flex-grow: 1;
+    order: 1;
+}
+article:first-of-type img{
+    flex-grow: 1;
+    min-width: 250px;
+}
+ul {
+    list-style-type: none;
+    font-size: 1.4em;
+}
+ul li{
+    padding: 10px 0px 10px 50px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 30px 30px;
+}
+ul li::first-letter{
+    text-transform: capitalize;
+}
+ul li:first-child{
+    background-image: url(./img/bien.png);
+    font-weight: bold;
+}
+ul li:nth-child(2){
+    background-image: url(./img/mal.png);
+}
+ul li:nth-child(3){
+    background-image: url(./img/chat.png);
+}
+
+/* Second article : Space's rock */
+article:nth-of-type(2){
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+article:nth-of-type(2) > *{
+    flex:1;
+    font-family: 'Open Sans', sans-serif;
+}
+article:nth-of-type(2) section:first-child{
+    flex-grow: 1;
+    text-align: justify;
+}
+article:nth-of-type(2) section:nth-child(2){
+    flex-grow: 1;
+    text-align: left;
+    order: -1;
+}
+article:nth-of-type(2) section figure img{
+    max-width:100%;
+}
+
+/* Tirth article : The story */
+article:nth-of-type(3) p:first-of-type{
+    margin-top: 50px;
+}
+.farmer, .villagers{
+    display: block;
+    max-width: 65%;
+    margin-top: 15px;
+    padding: 0 10px;
+    line-height: 2em;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700px;
+    font-style: italic;
+    color: rgb(56, 51, 51);
+    background-color: rgba(253, 186, 110, 0.411);
+}
+.farmer{
+    border-left: 3px solid rgb(247, 190, 33);
+}
+.villagers{
+    border-left: 3px solid rgb(61, 31, 190);
+}
+
+/* Fourth article : Table */
+table{
+    border-collapse: collapse;
+    width: 600px;
+    text-align: center;
+}
+table td{
+    padding: 5px;
+}
+thead th{
+    background-color: rgb(43, 42, 42);
+    color: white;
+    padding: 20px 0;
+    font-size: 18px;
+}
+tr:nth-child(odd){
+    background-color: rgb(182, 181, 181);
+}
+tr:nth-child(even){
+    background-color: white;
+}
+tfoot td{
+    padding: 10px 0;
+    font-style: italic;
+    background-color: rgb(43, 42, 42);
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer{
+    height: 30px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 450px;
+}
